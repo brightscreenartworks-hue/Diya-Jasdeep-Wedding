@@ -4,14 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Diya & Jasdeep — Wedding Invitation</title>
+<meta name="description" content="Join us in celebrating the wedding of Diya &amp; Jasdeep · 26 February – 1 March 2027 · Rudarpur, Uttarakhand">
+<link rel="canonical" href="https://diyajasdeepwedding.vercel.app/">
+<!-- link preview (WhatsApp, iMessage, Facebook, LinkedIn, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diya &amp; Jasdeep">
+<meta property="og:url" content="https://diyajasdeepwedding.vercel.app/">
+<meta property="og:title" content="Diya &amp; Jasdeep — Wedding Invitation">
+<meta property="og:description" content="Join us in celebrating our wedding · 26 February – 1 March 2027 · Rudarpur, Uttarakhand">
+<meta property="og:image" content="https://diyajasdeepwedding.vercel.app/images/og-image.jpg">
+<meta property="og:image:secure_url" content="https://diyajasdeepwedding.vercel.app/images/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Diya and Jasdeep holding hands in a garden">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diya &amp; Jasdeep — Wedding Invitation">
+<meta name="twitter:description" content="Join us in celebrating our wedding · 26 February – 1 March 2027 · Rudarpur, Uttarakhand">
+<meta name="twitter:image" content="https://diyajasdeepwedding.vercel.app/images/og-image.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+<meta name="theme-color" content="#38543d">
+<link rel="preload" as="image" href="images/monogram-cream.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&family=Pinyon+Script&family=Playfair+Display:wght@400;500&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:'Bakelony';src:url(fonts/bakelony.woff) format('woff');font-display:swap}
+@font-face{font-family:'Andrade Pro';src:url(fonts/andrade-pro-bold.woff) format('woff');font-weight:700;font-display:swap}
 :root{
   --green:#38543d; --green-d:#2b4230; --cream:#faf7f2; --paper:#faf7f2;
   --line:rgba(56,84,61,.28); --soft:#e7e4dc; --white:#fffdf9;
-  --script:'Pinyon Script',cursive; --display:'Playfair Display',Georgia,serif;
+  --script:'Bakelony','Pinyon Script',cursive; --caps:'Andrade Pro','Playfair Display',Georgia,serif; --display:'Playfair Display',Georgia,serif;
   --serif:'Cormorant Garamond',Georgia,serif; --sans:'Montserrat',Arial,sans-serif;
   --deva:'Tiro Devanagari Sanskrit',serif;
   --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .33  0 0 0 0 .29  0 0 0 0 .22  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
@@ -41,7 +68,7 @@ a{color:inherit}
 
 /* ---------- shared type ---------- */
 .ttl{text-align:center;display:flex;flex-direction:column;align-items:center}
-.ttl .caps{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.09em;font-size:clamp(22px,4.2vw,30px);line-height:1}
+.ttl .caps{font-family:var(--caps);font-weight:700;text-transform:uppercase;letter-spacing:.09em;font-size:clamp(22px,4.2vw,30px);line-height:1}
 .ttl .scr{font-family:var(--script);font-size:clamp(42px,8vw,60px);line-height:.9;margin-top:-4px}
 .ttl .scr.solo{font-size:clamp(58px,11vw,84px);line-height:1;margin-top:0}
 .ttl .flour{width:90px;height:1px;background:var(--line);margin-top:14px;position:relative}
@@ -60,13 +87,17 @@ section{scroll-margin-top:60px}
 /* ---------- header ---------- */
 .hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s,color .4s;color:#fff}
 .hdr .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:68px;width:min(1080px,100% - 32px);margin:auto}
-.hdr nav{display:flex;gap:clamp(18px,4vw,56px)}
+.hdr nav{display:flex;gap:clamp(16px,2.6vw,44px)}
 .hdr nav.l{justify-content:flex-start}.hdr nav.r{justify-content:flex-end}
 .hdr nav a{font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;opacity:.92}
 .hdr nav a:hover{opacity:1}
 .mono{display:flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
 .mono .rule{width:44px;height:1px;background:currentColor;opacity:.75}
-.mono .dj{font-family:var(--script);font-size:34px;padding:2px 6px 4px;letter-spacing:-.04em}
+.mono img{display:block;width:42px;height:auto}
+.mono .m-dark{display:none}
+.hdr.solid .mono .m-light{display:none}
+.hdr.solid .mono .m-dark{display:block}
+.menu .mmark{width:64px;height:auto;margin-bottom:14px}
 .hdr.solid{background:rgba(245,241,235,.94);backdrop-filter:blur(8px);color:var(--green);box-shadow:0 1px 0 var(--line)}
 .burger-sp{display:none}
 .burger{display:none;background:none;border:0;color:inherit;width:40px;height:40px;cursor:pointer;justify-self:end}
@@ -97,7 +128,7 @@ section{scroll-margin-top:60px}
 /* ---------- 2 couple ---------- */
 .couple{overflow:hidden;padding:clamp(70px,10vw,110px) 0 clamp(50px,7vw,80px)}
 .date{text-align:center}
-.date h2{font-family:var(--display);font-weight:400;font-size:clamp(38px,7.5vw,62px);letter-spacing:.03em}
+.date h2{font-family:var(--caps);font-weight:700;font-size:clamp(23px,4.5vw,37px);letter-spacing:.03em}
 .date .eyebrow{margin-top:14px;font-size:12px;letter-spacing:.3em}
 .pair{display:grid;grid-template-columns:1fr;gap:34px;align-items:center;margin-top:clamp(56px,8vw,96px)}
 .pair .media{position:relative;padding:28px 0}
@@ -107,7 +138,7 @@ section{scroll-margin-top:60px}
 .pair.rev .media .ph{margin-left:auto;margin-right:6%}
 .pair .txt{text-align:center;padding:0 6px}
 .pair .scr{font-family:var(--script);font-size:clamp(44px,8vw,58px);line-height:1}
-.pair .name{font-family:var(--display);font-size:clamp(19px,3.4vw,25px);letter-spacing:.14em;text-transform:uppercase;margin-top:12px}
+.pair .name{font-family:var(--caps);font-weight:700;font-size:clamp(19px,3.4vw,25px);letter-spacing:.14em;text-transform:uppercase;margin-top:12px}
 .rel{margin-top:24px}
 .rel .k{font-family:var(--sans);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;opacity:.7}
 .rel .v{font-family:var(--sans);font-size:11px;line-height:1.85;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
@@ -123,23 +154,22 @@ section{scroll-margin-top:60px}
 .moments{padding:clamp(30px,5vw,60px) 0 clamp(70px,9vw,100px)}
 .moments h2{font-family:var(--serif);font-weight:500;text-align:center;font-size:clamp(28px,5vw,40px);letter-spacing:.01em}
 .grid6{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:34px}
-.grid6 .ph{aspect-ratio:1;cursor:zoom-in}
+.grid6 .ph{aspect-ratio:4/5;cursor:zoom-in}
 .grid6 .ph img{transition:transform .8s ease}
 .grid6 .ph:hover img{transform:scale(1.04)}
-@media (min-width:700px){.grid6{grid-template-columns:repeat(3,1fr);gap:10px;width:min(760px,100%);margin-inline:auto}}
+@media (min-width:700px){.grid6{grid-template-columns:repeat(2,1fr);gap:12px;width:min(640px,100%);margin-inline:auto}}
 
 /* ---------- lace frame (refs 4 & 7) ---------- */
 .lace{position:relative;aspect-ratio:4/5;width:min(100%,380px);filter:drop-shadow(0 6px 14px rgba(0,0,0,.18))}
 .lace svg{position:absolute;inset:0;width:100%;height:100%}
 .lace .ph{position:absolute;inset:6.8% 8.5%}
-.lace .ph img{filter:grayscale(1) contrast(1.05)}
 .lace.color .ph img{filter:none}
 
 /* ---------- 4 invitation ---------- */
 .invite{padding:clamp(80px,10vw,120px) 0}
 .inv{display:grid;gap:44px;align-items:center;justify-items:center}
 .inv .txt{text-align:center;max-width:470px}
-.ganesh{width:84px;height:auto;margin:0 auto 18px;color:var(--cream)}
+.ganesh{display:block;width:78px;height:auto;margin:0 auto 20px}
 .shlok{font-family:var(--deva);font-size:clamp(16px,2.6vw,19px);line-height:1.9;opacity:.95}
 .shlok-tr{font-family:var(--serif);font-style:italic;font-size:15px;opacity:.75;margin-top:8px;line-height:1.6}
 .orn{width:120px;height:1px;background:rgba(245,241,235,.45);margin:26px auto}
@@ -158,7 +188,7 @@ section{scroll-margin-top:60px}
 @media (min-width:760px){.fn{width:28%}}
 
 /* ---------- 6 function details ---------- */
-.details{padding:clamp(40px,6vw,70px) 0 clamp(80px,10vw,110px)}
+.details{padding:clamp(80px,10vw,110px) 0 clamp(70px,9vw,100px)}
 .sched{width:min(780px,100%);margin:56px auto 0}
 .item{display:grid;grid-template-columns:1fr;gap:20px;text-align:center;padding:44px 4px}
 .item + .item{border-top:1px solid rgba(56,84,61,.13)}
@@ -167,7 +197,7 @@ section{scroll-margin-top:60px}
 .when .dd{font-family:var(--display);font-size:clamp(50px,8vw,60px);line-height:1;margin:8px 0 6px}
 .when .my{font-family:var(--sans);font-size:10px;letter-spacing:.28em;text-transform:uppercase}
 .item .sep{display:none}
-.item h3{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3.6vw,27px);letter-spacing:.16em;text-transform:uppercase;line-height:1.25}
+.item h3{font-family:var(--caps);font-weight:700;font-size:clamp(22px,3.6vw,27px);letter-spacing:.16em;text-transform:uppercase;line-height:1.25}
 .meta{display:grid;gap:18px;margin-top:22px}
 .meta>div{display:grid;gap:6px}
 .meta dt{font-family:var(--sans);font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;opacity:.6;padding-top:5px}
@@ -181,21 +211,20 @@ section{scroll-margin-top:60px}
   .meta{grid-template-columns:118px 1fr;gap:16px 20px;align-items:baseline}
   .meta>div{display:contents}
 }
-.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:min(720px,100%);margin:56px auto 0}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:min(560px,100%);margin:56px auto 0}
 .strip .ph{aspect-ratio:3/4}
-.strip .ph img{filter:grayscale(1)}
 
 /* ---------- 7 venue ---------- */
 .venue{padding:clamp(80px,10vw,120px) 0}
 .vrow{display:grid;gap:40px;align-items:center;justify-items:center;margin-top:50px}
 .vrow + .vrow{margin-top:80px}
 .vtxt{text-align:center;max-width:420px}
-.vtxt h3{font-family:var(--serif);font-weight:500;font-size:clamp(19px,3vw,23px);letter-spacing:.12em;text-transform:uppercase;line-height:1.4}
+.vtxt h3{font-family:var(--caps);font-weight:700;font-size:clamp(19px,3vw,23px);letter-spacing:.12em;text-transform:uppercase;line-height:1.4}
 .vtxt .addr{font-family:var(--serif);font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-top:16px;opacity:.9;line-height:1.7}
 .vtxt .hosts{font-family:var(--serif);font-size:17px;line-height:1.6;margin-top:18px;opacity:.92}
 .vtxt .hosts i{display:block;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-style:normal;opacity:.75;margin-bottom:4px}
-.btn{display:inline-block;margin-top:26px;padding:13px 26px;border:1px solid rgba(245,241,235,.75);font-family:var(--sans);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;color:var(--cream);transition:background .3s,color .3s}
-.btn:hover{background:var(--cream);color:var(--green)}
+.btn{display:inline-block;margin-top:26px;padding:13px 26px;border:1px solid var(--cream);background:var(--cream);font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;color:var(--green);transition:background .3s,color .3s}
+.btn:hover{background:transparent;color:var(--cream)}
 @media (min-width:820px){
   .vrow{grid-template-columns:1fr 1fr;gap:70px}
   .vrow .vtxt{justify-self:center}
@@ -206,11 +235,9 @@ section{scroll-margin-top:60px}
 /* ---------- 8 salutation ---------- */
 .closing{padding:clamp(80px,10vw,120px) 0 clamp(40px,6vw,60px)}
 .cl{display:grid;gap:56px;align-items:center}
-.pol{position:relative;height:clamp(360px,62vw,470px);width:min(100%,460px);margin:auto}
+.pol{position:relative;display:flex;justify-content:center;width:min(100%,460px);margin:auto;padding:16px 0}
 .pol .ph{position:absolute;border:7px solid #fff;box-shadow:0 10px 22px rgba(0,0,0,.16)}
-.pol .p1{width:66%;aspect-ratio:4/3;top:0;left:0;transform:rotate(-5deg)}
-.pol .p2{width:58%;aspect-ratio:4/3;bottom:4%;left:22%;transform:rotate(3deg)}
-.pol .ph img{filter:grayscale(1)}
+.pol .p1{position:relative;width:min(78%,340px);aspect-ratio:3/4;transform:rotate(-3deg)}
 .cl .txt{text-align:center;max-width:470px;margin:auto}
 .cl h2{font-family:var(--script);font-weight:400;font-size:clamp(40px,6.5vw,54px);line-height:1.12}
 .cl p{font-family:var(--serif);font-size:18px;line-height:1.65;margin-top:18px;text-align:justify;text-align-last:center}
@@ -241,7 +268,7 @@ section{scroll-margin-top:60px}
 .choice{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ch{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:22px 10px 18px;border:1px solid #ddd8cd;border-radius:12px;background:#fcfbf8;cursor:pointer;color:var(--green);text-align:center;transition:background .3s,border-color .3s,color .3s,transform .3s,box-shadow .3s}
 .ch svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.3;opacity:.5;transition:opacity .3s}
-.ch .s{font-family:var(--script);font-size:clamp(23px,4.4vw,28px);line-height:1.05}
+.ch .s{font-family:var(--caps);font-weight:700;font-size:clamp(15px,2.8vw,18px);letter-spacing:.04em;line-height:1.25;margin-top:2px}
 .ch .m{font-family:var(--serif);font-size:14px;opacity:.75;line-height:1.3}
 .ch:hover{border-color:rgba(56,84,61,.45);transform:translateY(-2px)}
 .ch.on{background:var(--green);border-color:var(--green);color:var(--cream);box-shadow:0 14px 26px -14px rgba(56,84,61,.75)}
@@ -297,8 +324,8 @@ section{scroll-margin-top:60px}
 
 /* ---------- 10 final ---------- */
 .final{padding:clamp(90px,12vw,140px) 0 clamp(60px,8vw,80px);text-align:center}
-.final .mono .dj{font-size:clamp(70px,13vw,110px);padding:4px 10px 10px}
-.final .mono .rule{width:90px}
+.final .fm-link{display:block;width:max-content;margin:0 auto}
+.final .fmono{display:block;width:clamp(150px,22vw,210px);height:auto}
 .final .names{font-family:var(--display);letter-spacing:.24em;text-transform:uppercase;font-size:clamp(13px,2.2vw,16px);margin-top:26px}
 .final p{font-family:var(--serif);font-style:italic;font-size:clamp(19px,3vw,23px);line-height:1.55;max-width:460px;margin:20px auto 0;opacity:.95}
 .final .tag{font-family:var(--sans);font-size:12px;letter-spacing:.3em;margin-top:32px}
@@ -311,6 +338,65 @@ section{scroll-margin-top:60px}
 .lb button{position:absolute;background:none;border:0;color:#fff;font-size:36px;cursor:pointer;font-family:var(--serif);padding:10px 16px}
 .lb .c{top:10px;right:10px}.lb .p{left:6px}.lb .n{right:6px}
 
+/* ---------- 6b wardrobe guide ---------- */
+.wardrobe{padding:clamp(20px,4vw,40px) 0 clamp(90px,11vw,130px)}
+.wsub{font-family:var(--serif);font-style:italic;font-size:18px;text-align:center;margin-top:14px;opacity:.85}
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:46px}
+@media (min-width:960px){.wgrid{gap:30px;width:min(1000px,100%);margin-inline:auto}}
+.wcard{background:#fff;border-radius:14px;overflow:hidden;border:1px solid rgba(56,84,61,.08);box-shadow:0 24px 48px -30px rgba(56,84,61,.35);display:flex;flex-direction:column}
+.wimg{aspect-ratio:391/340;overflow:hidden;background:#f4efe6}
+.wimg img{width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:transform 1s ease}
+.wimg.top img{object-position:center top}
+.wcard:hover .wimg img{transform:scale(1.03)}
+.wbody{padding:24px clamp(20px,3vw,30px) 26px;text-align:center;flex:1;display:flex;flex-direction:column}
+.wbody h3{font-family:var(--script);font-weight:400;font-size:clamp(40px,5vw,48px);line-height:1}
+.wtag{font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;margin-top:8px}
+.wwhen{font-family:var(--serif);font-size:15px;margin-top:10px;opacity:.75}
+.wdl{margin:20px 0 0;border-top:1px solid #ece8df;text-align:left}
+.wdl>div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid #ece8df}
+.wdl dt{font-family:var(--sans);font-size:9px;letter-spacing:.26em;text-transform:uppercase;opacity:.6;padding-top:5px}
+.wdl dd{font-family:var(--serif);font-size:17px;line-height:1.45}
+.pal{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin-top:18px}
+.pal span{display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.pal i{width:14px;height:14px;border-radius:50%;box-shadow:0 0 0 1px rgba(0,0,0,.1)}
+.wq{font-family:var(--script);font-size:26px;margin-top:auto;padding-top:18px;line-height:1.2}
+
+/* ---------- loader ---------- */
+.loader{position:fixed;inset:0;z-index:300;background:var(--green);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .8s ease,visibility .8s}
+.loader .lmono{display:block;width:clamp(120px,22vw,170px);height:auto;animation:breathe 2.4s ease-in-out infinite}
+.loader .bar{width:120px;height:1px;background:rgba(245,241,235,.2);overflow:hidden;position:relative}
+.loader .bar::after{content:"";position:absolute;inset:0;width:40%;background:var(--cream);animation:slidebar 1.4s ease-in-out infinite}
+.loader.gone{opacity:0;visibility:hidden}
+@keyframes breathe{0%,100%{opacity:.75;transform:scale(.97)}50%{opacity:1;transform:scale(1)}}
+@keyframes slidebar{from{transform:translateX(-100%)}to{transform:translateX(250%)}}
+body.loading{overflow:hidden}
+body.loading .hero .in>*,body.loading .hero .ph img{animation-play-state:paused}
+
+
+/* Bakelony spacing fixes */
+.ttl .scr{line-height:1.15;margin-top:2px;padding-bottom:6px}
+.pair .scr{line-height:1.2}
+.pair .name{margin-top:18px}
+.wsub{margin-top:18px}
+.wbody h3{line-height:1.2;padding-bottom:4px}
+.wtag{margin-top:12px}
+.cl h2{line-height:1.25}
+.thanks .scr{line-height:1.25}
+@media (max-width:639px){
+  .wgrid{gap:10px;margin-top:34px}
+  .wcard{border-radius:10px}
+  .wbody{padding:14px 10px 16px}
+  .wbody h3{font-size:clamp(24px,7.4vw,30px);line-height:1.15}
+  .wtag{font-size:7.5px;letter-spacing:.16em;margin-top:6px}
+  .wdl{margin-top:12px}
+  .wdl>div{grid-template-columns:1fr;gap:3px;padding:8px 0}
+  .wdl dt{font-size:7.5px;letter-spacing:.2em;padding-top:0}
+  .wdl dd{font-size:13.5px;line-height:1.35}
+  .pal{gap:5px 9px;margin-top:12px}
+  .pal span{font-size:7.5px;letter-spacing:.12em;gap:4px}
+  .pal i{width:10px;height:10px}
+}
+@media (max-width:639px){.wtag{margin-top:8px}.wdl>div{display:block}.wdl dd{margin-top:3px}}
 /* ---------- motion ---------- */
 .rv{opacity:0;transform:translateY(26px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -326,27 +412,32 @@ section{scroll-margin-top:60px}
 .pv-grid{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.3;
   background-image:linear-gradient(to right,#8c8c8c 1px,transparent 1px),linear-gradient(to bottom,#8c8c8c 1px,transparent 1px);
   background-size:48px 48px}
-.pv-mark{position:fixed;inset:0;z-index:101;pointer-events:none;opacity:.14;
+.pv-mark{position:fixed;inset:0;z-index:101;pointer-events:none;opacity:.15;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'><text x='150' y='108' text-anchor='middle' transform='rotate(-28 150 100)' font-family='Arial,Helvetica,sans-serif' font-size='22' font-weight='600' letter-spacing='6' fill='%23777'>PREVIEW</text></svg>");
   background-size:300px 200px}
 </style>
 </head>
-<body>
+<body class="loading">
+<div class="loader" id="loader" role="status" aria-label="Loading">
+  <img class="lmono" src="images/monogram-cream.png" alt="">
+  <span class="bar"></span>
+</div>
 
 <!-- ============ HEADER ============ -->
 <header class="hdr" id="hdr">
   <div class="bar">
-    <nav class="l"><a href="#couple">Couple</a><a href="#functions">Functions</a></nav>
+    <nav class="l"><a href="#couple">Couple</a><a href="#moments">Moments</a><a href="#details">Schedule</a></nav>
     <span class="burger-sp"></span>
-    <a class="mono" href="#home" aria-label="Back to top"><span class="rule"></span><span class="dj">DJ</span><span class="rule"></span></a>
-    <nav class="r"><a href="#venue">Venue</a><a href="#rsvp">RSVP</a></nav>
+    <a class="mono" href="#home" aria-label="Diya & Jasdeep — back to top"><img class="m-light" src="images/monogram-white.png" alt="DJ"><img class="m-dark" src="images/monogram-green-ink.png" alt=""></a>
+    <nav class="r"><a href="#wardrobe">Wardrobe</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a></nav>
     <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
   </div>
 </header>
 <div class="menu" id="menu">
   <button class="x" id="mx" aria-label="Close menu">×</button>
+  <img class="mmark" src="images/monogram-cream.png" alt="" aria-hidden="true">
   <a href="#home">Home</a><a href="#couple">Couple</a><a href="#moments">Our Moments</a><a href="#invitation">Invitation</a>
-  <a href="#functions">Functions</a><a href="#details">Details</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a>
+  <a href="#details">Schedule</a><a href="#wardrobe">Wardrobe</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a>
 </div>
 
 <!-- ============ 1 HERO ============ -->
@@ -370,7 +461,7 @@ section{scroll-margin-top:60px}
     </div>
 
     <div class="pair">
-      <div class="media rv"><div class="ph" data-photo="bride"></div></div>
+      <div class="media rv"><div class="ph" data-photo="bride" data-pos="50% 40%"></div></div>
       <div class="txt rv d1">
         <p class="scr">Meet the Bride</p>
         <p class="name">Diya Marasini</p>
@@ -380,7 +471,7 @@ section{scroll-margin-top:60px}
     </div>
 
     <div class="pair rev">
-      <div class="media rv"><div class="ph" data-photo="groom"></div></div>
+      <div class="media rv"><div class="ph" data-photo="groom" data-pos="50% 30%"></div></div>
       <div class="txt rv d1">
         <p class="scr">Meet the Groom</p>
         <p class="name">Jasdeep Singh Dhaliwal</p>
@@ -394,14 +485,12 @@ section{scroll-margin-top:60px}
 <!-- ============ 3 MOMENTS ============ -->
 <section class="moments paper" id="moments">
   <div class="wrap">
-    <h2 class="rv">Our Moments</h2>
+    <div class="ttl rv"><span class="caps">Our</span><span class="scr">Moments</span></div>
     <div class="grid6">
-      <div class="ph rv" data-photo="moment-1"></div>
-      <div class="ph rv d1" data-photo="moment-2"></div>
-      <div class="ph rv d2" data-photo="moment-3"></div>
-      <div class="ph rv" data-photo="moment-4"></div>
-      <div class="ph rv d1" data-photo="moment-5"></div>
-      <div class="ph rv d2" data-photo="moment-6"></div>
+      <div class="ph rv" data-photo="moment-1" data-pos="50% 62%"></div>
+      <div class="ph rv d1" data-photo="moment-2" data-pos="50% 40%"></div>
+      <div class="ph rv d2" data-photo="moment-3" data-pos="50% 42%"></div>
+      <div class="ph rv d3" data-photo="moment-4" data-pos="50% 60%"></div>
     </div>
   </div>
 </section>
@@ -410,22 +499,10 @@ section{scroll-margin-top:60px}
 <section class="invite green" id="invitation">
   <div class="edge up"></div>
   <div class="wrap inv">
-    <div class="lace rv" data-photo-in="invite"></div>
+    <div class="lace color rv" data-photo-in="invite" data-pos="38% 60%"></div>
     <div class="txt rv d1">
-      <svg class="ganesh" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-label="Lord Ganesha">
-        <path d="M41 25 Q50 4 59 25"/><path d="M50 9 v-4"/><path d="M38 27 H62"/><circle cx="50" cy="16" r="1.4"/>
-        <path d="M38 28 C33 36 34 48 41 56"/><path d="M62 28 C67 36 66 48 59 56"/>
-        <path d="M38 33 C22 24 10 34 14 49 C17 60 29 63 37 54"/><path d="M62 33 C78 24 90 34 86 49 C83 60 71 63 63 54"/>
-        <path d="M20 40 q4 3 3 9"/><path d="M80 40 q-4 3 -3 9"/>
-        <path d="M43 43 q3 -2.2 6 0"/><path d="M51 43 q3 -2.2 6 0"/>
-        <path d="M50 30 v7"/><circle cx="50" cy="39.5" r="1"/>
-        <path d="M45 54 C43 68 45 81 53 87 C59 91 66 88 64 81 C62 76 56 78 58 83"/>
-        <path d="M55 54 C55 64 56 71 60 75"/>
-        <path d="M42 57 l-5 7"/><path d="M58 57 l4 6"/>
-        <path d="M30 92 H70"/><path d="M36 96 H64"/>
-      </svg>
+      <img class="ganesh" src="images/ganesh-cream.png" alt="Lord Ganesha">
       <p class="shlok">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</p>
-      <p class="shlok-tr">Vakratunda Mahakaya Suryakoti Samaprabha,<br>Nirvighnam Kuru Me Deva Sarva-Kaaryeshu Sarvada</p>
       <div class="orn"></div>
       <p class="quote">“We cordially invite your gracious presence for the wedding celebration.”</p>
       <p class="eyebrow sig">— Diya &amp; Jasdeep</p>
@@ -434,39 +511,10 @@ section{scroll-margin-top:60px}
   <div class="edge down"></div>
 </section>
 
-<!-- ============ 5 FUNCTIONS ============ -->
-<section class="functions paper" id="functions">
-  <div class="wrap">
-    <div class="ttl rv"><span class="scr solo">Functions</span><span class="flour"></span></div>
-    <div class="fgrid">
-      <a class="fn rv" href="#fd-cocktail">
-        <svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(8 38 100)"><path d="M29 20 H47 Q48 46 38 57 Q28 46 29 20 Z"/><path d="M30 31 H46"/><circle cx="36" cy="40" r="1"/><circle cx="40" cy="46" r=".9"/><circle cx="37" cy="51" r=".8"/><path d="M38 57 V92"/><path d="M29 95 Q38 90 47 95"/></g><g transform="rotate(-8 82 100)"><path d="M73 20 H91 Q92 46 82 57 Q72 46 73 20 Z"/><path d="M74 31 H90"/><circle cx="84" cy="40" r="1"/><circle cx="80" cy="46" r=".9"/><circle cx="83" cy="51" r=".8"/><path d="M82 57 V92"/><path d="M73 95 Q82 90 91 95"/></g><path d="M60 2 v12 M54 8 h12"/><path d="M51 15 l-3 3 M69 15 l3 3"/><path d="M42 80 Q51 85 60 82 Q69 85 78 80"/><path d="M60 82 q-9 -9 -13 -2 q4 6 13 2 q9 -9 13 -2 q-4 6 -13 2"/><path d="M60 82 l-5 9 M60 82 l5 9"/></svg>
-        <h3>Cocktail</h3><p>26 February 2027</p>
-      </a>
-      <a class="fn rv d1" href="#fd-heena">
-        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M46 112 V76 C42 70 36 63 32 58 C29 54 33 49 38 52 L49 63 V28 C49 22 59 22 59 28 V56 M59 56 V21 C59 15 69 15 69 21 V56 M69 56 V25 C69 19 79 19 79 25 V60 M79 60 V36 C79 30 89 30 89 36 V80 C89 96 82 104 80 112"/><path d="M45 102 Q63 108 81 102"/><path d="M45 107 Q63 113 81 107"/><circle cx="69" cy="80" r="3.5"/><circle cx="77" cy="80" r="2.2"/><circle cx="74.7" cy="85.7" r="2.2"/><circle cx="69" cy="88" r="2.2"/><circle cx="63.3" cy="85.7" r="2.2"/><circle cx="61" cy="80" r="2.2"/><circle cx="63.3" cy="74.3" r="2.2"/><circle cx="69" cy="72" r="2.2"/><circle cx="74.7" cy="74.3" r="2.2"/><circle cx="69" cy="80" r="13" stroke-dasharray="1 3"/><path d="M50 31 q4 3 8 0 M60 24 q4 3 8 0 M70 28 q4 3 8 0 M80 39 q4 3 8 0"/><path d="M54 36 V56 M64 29 V54 M74 33 V56 M84 44 V62" stroke-dasharray="1 3.2"/><path d="M37 56 l6 6" stroke-dasharray="1 3"/></svg>
-        <h3>Heena Bazaar</h3><p>27 February 2027</p>
-      </a>
-      <a class="fn rv d2" href="#fd-anand">
-        <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="62" r="21"/><circle cx="60" cy="62" r="16.5"/><path d="M60 12 L64.5 23 V78 H55.5 V23 Z"/><path d="M60 24 V75"/><path d="M50 81 H70"/><path d="M60 81 V93"/><circle cx="60" cy="96" r="2.6"/><path d="M71 98 C44 92 26 72 33 38 C35 60 48 80 73 91"/><path d="M71 95 l9 6"/><path d="M67 90 l5 9"/><path d="M49 98 C76 92 94 72 87 38 C85 60 72 80 47 91"/><path d="M49 95 l-9 6"/><path d="M53 90 l-5 9"/></svg>
-        <h3>Anand Karaj</h3><p>28 February 2027</p>
-      </a>
-      <a class="fn rv" href="#fd-wedding">
-        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M20 46 Q60 4 100 46"/><path d="M60 21 V13"/><circle cx="60" cy="10" r="2.4"/><path d="M16 46 H104"/><path d="M20 46 q5 7 10 0 q5 7 10 0 q5 7 10 0 q5 7 10 0 q5 7 10 0 q5 7 10 0 q5 7 10 0 q5 7 10 0"/><path d="M26 53 V100 M94 53 V100"/><path d="M22 53 H30 M90 53 H98 M22 100 H30 M90 100 H98"/><path d="M37 53 V100 M83 53 V100" stroke-width="1"/><path d="M30 60 Q60 78 90 60" stroke-dasharray="1.2 3"/><path d="M45 54 V64 M60 54 V68 M75 54 V64"/><circle cx="45" cy="66" r="1.7"/><circle cx="60" cy="70" r="1.7"/><circle cx="75" cy="66" r="1.7"/><path d="M14 100 H106 M10 106 H110"/><path d="M48 100 L52 92 H68 L72 100"/><path d="M60 92 C54 86 57 80 60 74 C63 80 66 86 60 92"/><path d="M60 89 C58.5 86 59 84 60 81.5"/></svg>
-        <h3>Wedding Ceremony</h3><p>28 February 2027</p>
-      </a>
-      <a class="fn rv d1" href="#fd-reception">
-        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 3 V16"/><circle cx="60" cy="19" r="3"/><path d="M60 22 V40"/><path d="M60 40 C53 44 53 52 60 56 C67 52 67 44 60 40 Z"/><path d="M60 56 V64"/><path d="M60 64 C56 70 56 76 60 80 C64 76 64 70 60 64 Z"/><path d="M60 80 V85"/><circle cx="60" cy="87.5" r="1.7"/><path d="M60 47 C48 47 36 47 30 39 M60 47 C72 47 84 47 90 39"/><path d="M60 59 C44 63 24 61 18 51 M60 59 C76 63 96 61 102 51"/><path d="M25 39 H35 M85 39 H95 M13 51 H23 M97 51 H107"/><rect x="28" y="29" width="4" height="10"/><rect x="88" y="29" width="4" height="10"/><rect x="16" y="41" width="4" height="10"/><rect x="100" y="41" width="4" height="10"/><path d="M30 28 C28 25 29 22 30 19 C31 22 32 25 30 28 M90 28 C88 25 89 22 90 19 C91 22 92 25 90 28 M18 40 C16 37 17 34 18 31 C19 34 20 37 18 40 M102 40 C100 37 101 34 102 31 C103 34 104 37 102 40"/><path d="M42 48 V56 M78 48 V56 M30 62 V70 M90 62 V70 M47 62 V72 M73 62 V72"/><circle cx="42" cy="58" r="1.6"/><circle cx="78" cy="58" r="1.6"/><circle cx="30" cy="72" r="1.6"/><circle cx="90" cy="72" r="1.6"/><circle cx="47" cy="74" r="1.6"/><circle cx="73" cy="74" r="1.6"/><path d="M18 51 Q39 78 60 72 Q81 78 102 51" stroke-dasharray="1 3"/></svg>
-        <h3>Reception</h3><p>1 March 2027</p>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ============ 6 FUNCTION DETAILS ============ -->
 <section class="details paper" id="details">
   <div class="wrap">
-    <div class="ttl rv"><span class="caps">Function</span><span class="scr">Details</span></div>
+    <div class="ttl rv"><span class="caps">Function</span><span class="scr">Schedules</span></div>
     <div class="sched">
       <div class="item rv" id="fd-cocktail">
         <div class="when"><span class="wd">Friday</span><span class="dd">26</span><span class="my">February 2027</span></div>
@@ -476,7 +524,6 @@ section{scroll-margin-top:60px}
           <dl class="meta">
             <div><dt>Time</dt><dd>6 PM onwards</dd></div>
             <div><dt>Venue</dt><dd>Ark Hotel &amp; Resorts<br><span class="loc">Rudarpur, Uttarakhand</span></dd></div>
-            <div><dt>Dress code</dt><dd>Indo-Western / Glamour</dd></div>
           </dl>
         </div>
       </div>
@@ -488,7 +535,6 @@ section{scroll-margin-top:60px}
           <dl class="meta">
             <div><dt>Time</dt><dd>11 AM onwards</dd></div>
             <div><dt>Venue</dt><dd>Ark Hotel &amp; Resorts<br><span class="loc">Rudarpur, Uttarakhand</span></dd></div>
-            <div><dt>Dress code</dt><dd>Playful and Colourful <span class="sw" aria-hidden="true"><i style="background:#e8a3b4"></i><i style="background:#8db58a"></i><i style="background:#f0d27a"></i></span><br><span class="loc">Pink, Green &amp; Yellow</span></dd></div>
           </dl>
         </div>
       </div>
@@ -500,7 +546,6 @@ section{scroll-margin-top:60px}
           <dl class="meta">
             <div><dt>Time</dt><dd>8 AM onwards</dd></div>
             <div><dt>Venue</dt><dd>Gurudwara Shri Guru Singh Sabha Kesharpur<br><span class="loc">Rudarpur, Uttarakhand</span></dd></div>
-            <div><dt>Dress code</dt><dd>Traditional Salwar Suit</dd></div>
           </dl>
         </div>
       </div>
@@ -512,7 +557,6 @@ section{scroll-margin-top:60px}
           <dl class="meta">
             <div><dt>Time</dt><dd>5 PM onwards</dd></div>
             <div><dt>Venue</dt><dd>Ark Hotel &amp; Resorts<br><span class="loc">Rudarpur, Uttarakhand</span></dd></div>
-            <div><dt>Dress code</dt><dd>Nepali &amp; Indian Traditional</dd></div>
           </dl>
         </div>
       </div>
@@ -530,9 +574,75 @@ section{scroll-margin-top:60px}
       </div>
     </div>
     <div class="strip">
-      <div class="ph rv" data-photo="detail-1"></div>
-      <div class="ph rv d1" data-photo="detail-2"></div>
-      <div class="ph rv d2" data-photo="detail-3"></div>
+      <div class="ph rv" data-photo="detail-1" data-pos="60% 50%"></div>
+      <div class="ph rv d1" data-photo="detail-2" data-pos="45% 50%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6b WARDROBE GUIDE ============ -->
+<section class="wardrobe paper" id="wardrobe">
+  <div class="wrap">
+    <div class="ttl rv"><span class="caps">Wardrobe</span><span class="scr">Guide</span></div>
+    <p class="wsub rv">A little inspiration for every celebration.</p>
+    <div class="wgrid">
+
+      <article class="wcard rv">
+        <div class="wimg"><img src="images/wardrobe-cocktail.jpg" alt="Illustrated guests in a black sequin gown, a black tuxedo, a gold sequin saree and an ivory suit" loading="lazy"></div>
+        <div class="wbody">
+          <h3>Cocktail</h3>
+          <p class="wtag">An Evening of Glamour</p>
+          <dl class="wdl">
+            <div><dt>Dress code</dt><dd>Indo-Western / Glamour</dd></div>
+            <div><dt>For her</dt><dd>Sequin or satin gowns, shimmering sarees</dd></div>
+            <div><dt>For him</dt><dd>Tuxedos with bow ties, tailored ivory suits</dd></div>
+          </dl>
+          <div class="pal"><span><i style="background:#1c1c1e"></i>Black</span><span><i style="background:#c9a24a"></i>Gold</span><span><i style="background:#efe6d2"></i>Ivory</span></div>
+        </div>
+      </article>
+
+      <article class="wcard rv d1">
+        <div class="wimg"><img src="images/wardrobe-heena.jpg" alt="Illustrated guests in a yellow lehenga, a pink sharara, a sage green kurta and a floral yellow Nehru jacket" loading="lazy"></div>
+        <div class="wbody">
+          <h3>Heena Bazaar</h3>
+          <p class="wtag">A Colourful Celebration</p>
+          <dl class="wdl">
+            <div><dt>Dress code</dt><dd>Playful and Colourful</dd></div>
+            <div><dt>For her</dt><dd>Lehengas and sharara sets in sunny yellows and pinks</dd></div>
+            <div><dt>For him</dt><dd>Sage green or yellow kurtas, floral Nehru jackets</dd></div>
+          </dl>
+          <div class="pal"><span><i style="background:#e8a3b4"></i>Pink</span><span><i style="background:#8db58a"></i>Green</span><span><i style="background:#f0d27a"></i>Yellow</span></div>
+        </div>
+      </article>
+
+      <article class="wcard rv">
+        <div class="wimg top"><img src="images/wardrobe-anand.jpg" alt="Illustrated guests in a maroon embroidered suit, a maroon kurta with turban, an orange anarkali and an ivory embroidered kurta" loading="lazy"></div>
+        <div class="wbody">
+          <h3>Anand Karaj</h3>
+          <p class="wtag">The Sacred Ceremony</p>
+          <dl class="wdl">
+            <div><dt>Dress code</dt><dd>Traditional Salwar Suit</dd></div>
+            <div><dt>For her</dt><dd>Embroidered salwar suits, shararas or anarkalis with a dupatta</dd></div>
+            <div><dt>For him</dt><dd>Kurta pyjama with a turban, or an ivory embroidered kurta</dd></div>
+          </dl>
+          <div class="pal"><span><i style="background:#7d1f2a"></i>Maroon</span><span><i style="background:#e5772e"></i>Orange</span><span><i style="background:#f1e9d8"></i>Ivory</span></div>
+        </div>
+      </article>
+
+      <article class="wcard rv d1">
+        <div class="wimg"><img src="images/wardrobe-wedding.jpg" alt="Illustrated guests in a maroon lehenga, a gold sherwani, a red saree with Nepali accents and a Nepali daura suruwal with dhaka topi" loading="lazy"></div>
+        <div class="wbody">
+          <h3>Wedding Ceremony</h3>
+          <p class="wtag">Diya &amp; Jasdeep</p>
+          <dl class="wdl">
+            <div><dt>Dress code</dt><dd>Nepali &amp; Indian Traditional</dd></div>
+            <div><dt>For her</dt><dd>Lehengas or sarees in maroon and red</dd></div>
+            <div><dt>For him</dt><dd>Ivory or gold sherwanis, or daura suruwal with a dhaka topi</dd></div>
+          </dl>
+          <div class="pal"><span><i style="background:#6e1b25"></i>Maroon</span><span><i style="background:#b8252f"></i>Red</span><span><i style="background:#c9a24a"></i>Gold</span></div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -550,7 +660,7 @@ section{scroll-margin-top:60px}
         <p class="hosts"><i>Hosting</i>Cocktail · Heena Bazaar<br>Wedding Ceremony · Reception</p>
         <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ark+Hotel+%26+Resorts+Rudrapur+Uttarakhand">View Location</a>
       </div>
-      <div class="lace rv d1" data-photo-in="venue-ark"></div>
+      <div class="lace rv d1" data-photo-in="venue-ark" data-pos="50% 50%"></div>
     </div>
 
     <div class="vrow rev">
@@ -560,7 +670,7 @@ section{scroll-margin-top:60px}
         <p class="hosts"><i>Hosting</i>Anand Karaj</p>
         <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gurudwara+Shri+Guru+Singh+Sabha+Kesharpur+Rudrapur+Uttarakhand">View Location</a>
       </div>
-      <div class="lace rv d1" data-photo-in="venue-gurudwara"></div>
+      <div class="lace rv d1" data-photo-in="venue-gurudwara" data-pos="50% 55%"></div>
     </div>
   </div>
   <div class="edge down"></div>
@@ -570,8 +680,7 @@ section{scroll-margin-top:60px}
 <section class="closing paper" id="closing">
   <div class="wrap cl">
     <div class="pol rv">
-      <div class="ph p1" data-photo="closing-1"></div>
-      <div class="ph p2" data-photo="closing-2"></div>
+      <div class="ph p1" data-photo="closing-1" data-pos="50% 55%"></div>
     </div>
     <div class="txt rv d1">
       <h2>We can’t wait to celebrate with you!</h2>
@@ -653,7 +762,7 @@ section{scroll-margin-top:60px}
 <!-- ============ 10 FINAL ============ -->
 <section class="final green" id="final">
   <div class="edge up"></div>
-  <a class="mono rv" href="#home" aria-label="Back to top"><span class="rule"></span><span class="dj">DJ</span><span class="rule"></span></a>
+  <a class="rv fm-link" href="#home" aria-label="Diya & Jasdeep — back to top"><img class="fmono" src="images/monogram-cream.png" alt="DJ monogram"></a>
   <p class="names rv d1">Diya &amp; Jasdeep</p>
   <p class="rv d2">With hearts full of gratitude, we look forward to celebrating with you.</p>
   <p class="tag rv d3">#herefortheDJ</p>
@@ -666,6 +775,16 @@ section{scroll-margin-top:60px}
 <div class="pv-mark" aria-hidden="true"></div>
 
 <script>
+/* ===== Loader: stays until the page (fonts, hero photo, scripts) has fully loaded ===== */
+(function(){
+  const L = document.getElementById('loader'), t0 = Date.now();
+  let done = false;
+  const hide = () => { if (done) return; done = true;
+    setTimeout(() => { L.classList.add('gone'); document.body.classList.remove('loading'); setTimeout(() => L.remove(), 900); }, Math.max(0, 900 - (Date.now() - t0))); };
+  if (document.readyState === 'complete') hide(); else addEventListener('load', hide);
+  setTimeout(hide, 15000);
+})();
+
 /* ===== Photos: drop files into the images/ folder with these names (jpg). ===== */
 const PHOTO_DIR = 'images/';
 const HERO_VIDEO = '';            // e.g. 'images/hero.mp4' — leave empty to use images/hero.jpg
@@ -676,6 +795,8 @@ function slot(el, key, alt){
   img.alt = alt || 'Diya & Jasdeep';
   img.loading = key === 'hero' ? 'eager' : 'lazy';
   img.onerror = () => el.classList.add('empty');
+  const pos = el.dataset.pos || (el.parentElement && el.parentElement.dataset.pos);
+  if (pos) img.style.objectPosition = pos;
   img.src = PHOTO_DIR + key + '.jpg';
   el.appendChild(img);
 }

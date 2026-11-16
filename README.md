@@ -1,0 +1,53 @@
+# Diya & Jasdeep — Wedding Website
+
+Live site: https://diyajasdeepwedding.vercel.app/
+
+A single-page, responsive wedding website. Plain HTML, CSS and JavaScript — no build step. Deploy the folder as-is (Vercel, Netlify, any static host).
+
+## Structure
+```
+index.html        all markup, styles (<style>) and scripts (<script>)
+favicon.ico       browser-tab icon (circular DJ monogram)
+fonts/            Bakelony (script) and Andrade Pro Bold (caps headings), WOFF
+images/           photos, monogram, Ganesh icon, wardrobe illustrations, icons
+```
+
+## Sections
+1. Hero · 2. Couple · 3. Our Moments · 4. Invitation (Ganesh + shlok) · 5. Function Schedules · 6. Wardrobe Guide · 7. Venue · 8. Closing message · 9. RSVP · 10. Final (monogram + #herefortheDJ)
+
+## Photos
+Photos load by file name from `images/` (see `data-photo="..."` in index.html):
+
+| File | Section |
+| --- | --- |
+| hero.jpg | Hero background |
+| bride.jpg, groom.jpg | Meet the Bride / Groom |
+| moment-1.jpg … moment-4.jpg | Our Moments (2 × 2) |
+| invite.jpg | Invitation lace frame |
+| detail-1.jpg, detail-2.jpg | Under Function Schedules |
+| venue-ark.jpg, venue-gurudwara.jpg | Venue lace frames |
+| closing-1.jpg | Closing message |
+| wardrobe-*.jpg | Wardrobe Guide illustrations |
+
+To swap a photo, replace the file with one of the same name. `data-pos` on each slot sets the crop focus (CSS object-position).
+
+## Link preview & icons
+- `images/og-image.jpg` (1200 × 630) is the image shown when the link is shared on WhatsApp, iMessage, Facebook, LinkedIn and X. The `og:` / `twitter:` tags in `<head>` point to it with the full live URL — update those URLs if the domain changes.
+- `favicon.ico`, `images/favicon-*.png` are the browser-tab and home-screen icons.
+
+## Settings (top of the `<script>` block)
+- `HERO_VIDEO` — e.g. `'images/hero.mp4'` to use a video in the hero.
+- `RSVP_ENDPOINT` — optional URL (Google Apps Script web app, Formspree, etc.). When set, RSVPs are POSTed there (Name, Attendance, Guests, Accompanying, Attending, Meal, Message). When empty, guests send their reply via WhatsApp or copy it.
+
+## Preview watermark
+The faint "PREVIEW" watermark is one line just above the `<script>` tag, marked
+`<!-- preview watermark: delete this line for the final site -->`. Delete the line below that comment for the final site.
+
+## Fonts
+Bakelony and Andrade Pro Bold are loaded from `fonts/`. Make sure your licences for both cover web embedding. Supporting fonts (Cormorant Garamond, Playfair Display, Montserrat, Pinyon Script fallback, Tiro Devanagari Sanskrit) load from Google Fonts.
+
+## Editing tips
+- Colours: `--green` (#38543d) and `--cream` / `--paper` in `:root`.
+- Fonts: `--script` (Bakelony) and `--caps` (Andrade Pro) in `:root`.
+- The scalloped dividers are pure CSS (`.edge.up` / `.edge.down`).
+- The loader hides on the window `load` event (15 s safety timeout).
