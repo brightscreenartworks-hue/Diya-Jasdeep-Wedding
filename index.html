@@ -485,9 +485,10 @@ body:not(.loading) .music{opacity:1;transform:none}
 @keyframes kb{from{transform:scale(1.05)}to{transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv,.hero .in>*{opacity:1;transform:none;animation:none;transition:none}.hero .ph img{animation:none}}
 
-.pv-grid{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.3;
-  background-image:linear-gradient(to right,#8c8c8c 1px,transparent 1px),linear-gradient(to bottom,#8c8c8c 1px,transparent 1px);
-  background-size:48px 48px}
+/* ---------- preview watermark: delete this rule and the watermark line above <audio> for the final site ---------- */
+.pv-mark{position:fixed;inset:0;z-index:101;pointer-events:none;opacity:.15;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'><text x='150' y='108' text-anchor='middle' transform='rotate(-28 150 100)' font-family='Arial,Helvetica,sans-serif' font-size='22' font-weight='600' letter-spacing='6' fill='%23777'>PREVIEW</text></svg>");
+  background-size:300px 200px}
 </style>
 </head>
 <body class="loading">
@@ -851,6 +852,9 @@ body:not(.loading) .music{opacity:1;transform:none}
 </section>
 
 <div class="lb" id="lb"><button class="c" aria-label="Close">×</button><button class="p" aria-label="Previous">‹</button><img alt=""><button class="n" aria-label="Next">›</button></div>
+
+<!-- preview watermark: delete the line below for the final site -->
+<div class="pv-mark" aria-hidden="true"></div>
 
 <audio id="bgm" src="audio/music.mp3" preload="auto" loop playsinline></audio>
 <button class="music" id="music" type="button" aria-label="Play music" aria-pressed="false"><span class="pp"><svg class="i-play" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9.5-5.5z"/></svg><svg class="i-pause" viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 1.5h3.2v11H2.5zM8.3 1.5h3.2v11H8.3z"/></svg></span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="ml" aria-hidden="true">Play</span></button>

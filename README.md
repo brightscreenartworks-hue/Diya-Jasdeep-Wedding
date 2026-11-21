@@ -49,3 +49,7 @@ Bakelony and Andrade Pro Bold are loaded from `fonts/`. Make sure your licences 
 - Fonts: `--script` (Bakelony) and `--caps` (Andrade Pro) in `:root`.
 - The scalloped dividers are pure CSS (`.edge.up` / `.edge.down`).
 - The loader hides on the window `load` event (15 s safety timeout).
+
+## Preview watermark
+This copy shows a faint "PREVIEW" watermark (15% opacity) over the whole site.
+To remove it, delete the line marked `preview watermark` just above `<audio id="bgm">`, and the `.pv-mark` rule at the end of the `<style>` block.
