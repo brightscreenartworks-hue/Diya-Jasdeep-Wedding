@@ -33,16 +33,13 @@ Photos load by file name from `images/` (see `data-photo="..."` in index.html):
 To swap a photo, replace the file with one of the same name. `data-pos` on each slot sets the crop focus (CSS object-position).
 
 ## Link preview & icons
-- `images/og-image.jpg` (1200 × 630) is the image shown when the link is shared on WhatsApp, iMessage, Facebook, LinkedIn and X. The `og:` / `twitter:` tags in `<head>` point to it with the full live URL — update those URLs if the domain changes.
+- `images/wa-preview.jpg` (1200 × 630) is the image shown when the link is shared on WhatsApp, iMessage, Facebook, LinkedIn and X. The `og:` / `twitter:` tags in `<head>` point to it with the full live URL — update those URLs if the domain changes.
 - `favicon.ico`, `images/favicon-*.png` are the browser-tab and home-screen icons.
 
 ## Settings (top of the `<script>` block)
 - `HERO_VIDEO` — e.g. `'images/hero.mp4'` to use a video in the hero.
 - `RSVP_ENDPOINT` — optional URL (Google Apps Script web app, Formspree, etc.). When set, RSVPs are POSTed there (Name, Attendance, Guests, Accompanying, Attending, Meal, Message). When empty, guests send their reply via WhatsApp or copy it.
 
-## Preview watermark
-The faint "PREVIEW" watermark is one line just above the `<script>` tag, marked
-`<!-- preview watermark: delete this line for the final site -->`. Delete the line below that comment for the final site.
 
 ## Fonts
 Bakelony and Andrade Pro Bold are loaded from `fonts/`. Make sure your licences for both cover web embedding. Supporting fonts (Cormorant Garamond, Playfair Display, Montserrat, Pinyon Script fallback, Tiro Devanagari Sanskrit) load from Google Fonts.
@@ -52,3 +49,7 @@ Bakelony and Andrade Pro Bold are loaded from `fonts/`. Make sure your licences 
 - Fonts: `--script` (Bakelony) and `--caps` (Andrade Pro) in `:root`.
 - The scalloped dividers are pure CSS (`.edge.up` / `.edge.down`).
 - The loader hides on the window `load` event (15 s safety timeout).
+
+## Preview overlay
+This copy shows a faint grid (30% opacity) and a "PREVIEW" watermark (15%) over the whole site.
+To remove them, delete the two lines marked `preview overlay` just above `<audio id="bgm">`, and the `.pv-grid` / `.pv-mark` CSS at the end of the `<style>` block.
