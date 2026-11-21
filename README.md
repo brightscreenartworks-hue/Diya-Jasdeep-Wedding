@@ -6,6 +6,7 @@ A single-page, responsive wedding website. Plain HTML, CSS and JavaScript — no
 
 ## Structure
 ```
+audio/music.mp3   background music (starts after the loader; pauses on external links, resumes where it stopped)
 index.html        all markup, styles (<style>) and scripts (<script>)
 favicon.ico       browser-tab icon (circular DJ monogram)
 fonts/            Bakelony (script) and Andrade Pro Bold (caps headings), WOFF
@@ -13,14 +14,14 @@ images/           photos, monogram, Ganesh icon, wardrobe illustrations, icons
 ```
 
 ## Sections
-1. Hero · 2. Couple · 3. Our Moments · 4. Invitation (Ganesh + shlok) · 5. Function Schedules · 6. Wardrobe Guide · 7. Venue · 8. Closing message · 9. RSVP · 10. Final (monogram + #herefortheDJ)
+1. Hero · 2. Scratch-card date + invitation (couple & families) · 3. Our Moments · 4. Countdown to 26 Feb 2027, 6 PM IST · 5. Function Schedules · 6. Wardrobe Guide · 7. Venue · 8. Closing message · 9. RSVP · 10. Final (monogram + #herefortheDJ)
 
 ## Photos
 Photos load by file name from `images/` (see `data-photo="..."` in index.html):
 
 | File | Section |
 | --- | --- |
-| hero.jpg | Hero background |
+| hero.jpg, hero-bg.jpg | Hero photo (shown at full sharpness) and its blurred side fill for wide screens |
 | bride.jpg, groom.jpg | Meet the Bride / Groom |
 | moment-1.jpg … moment-4.jpg | Our Moments (2 × 2) |
 | invite.jpg | Invitation lace frame |
