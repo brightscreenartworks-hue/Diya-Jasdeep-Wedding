@@ -120,15 +120,12 @@ section{scroll-margin-top:60px}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,25,18,.55) 0%,rgba(15,25,18,.32) 22%,rgba(15,25,18,.06) 42%,rgba(15,25,18,0) 70%,rgba(15,25,18,.18) 100%)}
 .hero .tex{position:absolute;inset:0;z-index:1;background-image:var(--grain);opacity:.18;mix-blend-mode:overlay}
 .hero .in{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:clamp(100px,15vh,150px) 16px 0}
-/* wide screens: show the portrait photo at its native sharpness, full height, over a blurred copy of itself */
-@media (min-aspect-ratio:1/1){
-  .hero .ph{background:#2f3a2c url(images/hero-bg.jpg) center/cover no-repeat}
-  .hero .ph::before{content:"";position:absolute;inset:0;background:rgba(20,30,22,.25)}
-  .hero .ph img{position:absolute;top:0;bottom:0;left:0;right:0;margin:0 auto;width:auto;height:100%;max-width:none;object-fit:contain;transform:none!important;animation:none!important;
-    -webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent)}
-}
-.hero .ph img,.hero .ph video{object-position:50% 62%;transform-origin:50% 60%}
-@media (max-aspect-ratio:3/4){.hero .ph img,.hero .ph video{object-position:50% 60%}.hero .in{padding-top:clamp(92px,13vh,130px)}}
+.hero .ph{background:#2f3a2c url(images/hero-bg.jpg) center/cover no-repeat}  /* tiny placeholder while the photo loads */
+.hero .ph img{width:100%;height:100%;object-fit:cover}
+.hero .ph img,.hero .ph video{object-position:50% 68%;transform-origin:50% 68%}
+@media (min-aspect-ratio:2/1){.hero .ph img,.hero .ph video{object-position:50% 64%}}
+@media (max-aspect-ratio:4/3){.hero .ph img,.hero .ph video{object-position:50% 72%;transform-origin:50% 72%}}
+@media (max-aspect-ratio:3/4){.hero .ph img,.hero .ph video{object-position:50% 60%;transform-origin:50% 62%}.hero .in{padding-top:clamp(92px,13vh,130px)}}
 .hero h1{font-family:var(--script);font-weight:400;font-size:clamp(42px,9vw,84px);line-height:1.05;margin-top:10px;text-shadow:0 2px 20px rgba(0,0,0,.35)}
 .hero .eyebrow{text-shadow:0 1px 10px rgba(0,0,0,.4)}
 .hero .hr{width:clamp(100px,16vw,150px);height:1px;background:rgba(255,255,255,.8);margin-top:14px}
@@ -478,7 +475,7 @@ body:not(.loading) .music{opacity:1;transform:none}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
 .hero .in>*{opacity:0;transform:translateY(16px);animation:up 1.4s cubic-bezier(.2,.7,.2,1) forwards}
 .hero .in>*:nth-child(2){animation-delay:.25s}.hero .in>*:nth-child(3){animation-delay:.5s}
-.hero .ph img,.hero .ph video{animation:none}
+.hero .ph img,.hero .ph video{animation:kb 18s ease-out forwards}
 @keyframes up{to{opacity:1;transform:none}}
 @keyframes kb{from{transform:scale(1.05)}to{transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv,.hero .in>*{opacity:1;transform:none;animation:none;transition:none}.hero .ph img{animation:none}}
