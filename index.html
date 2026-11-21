@@ -372,6 +372,11 @@ section{scroll-margin-top:60px}
 .loader .bar{width:120px;height:1px;background:rgba(245,241,235,.2);overflow:hidden;position:relative}
 .loader .bar::after{content:"";position:absolute;inset:0;width:40%;background:var(--cream);animation:slidebar 1.4s ease-in-out infinite}
 .loader.gone{opacity:0;visibility:hidden}
+.loader .enter{display:none;margin-top:4px;padding:14px 30px;border:1px solid var(--cream);border-radius:30px;background:var(--cream);color:var(--green);font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:background .3s,color .3s}
+.loader .enter:hover{background:transparent;color:var(--cream)}
+.loader.ask .bar{display:none}
+.loader.ask .enter{display:block;animation:up 1s cubic-bezier(.2,.7,.2,1) both}
+.loader.ask .lmono{animation:none}
 @keyframes breathe{0%,100%{opacity:.75;transform:scale(.97)}50%{opacity:1;transform:scale(1)}}
 @keyframes slidebar{from{transform:translateX(-100%)}to{transform:translateX(250%)}}
 body.loading{overflow:hidden}
@@ -493,6 +498,7 @@ body:not(.loading) .music{opacity:1;transform:none}
 <div class="loader" id="loader" role="status" aria-label="Loading">
   <img class="lmono" src="images/monogram-cream.png" alt="">
   <span class="bar"></span>
+  <button class="enter" id="enter" type="button">Open Invitation</button>
 </div>
 
 <!-- ============ HEADER ============ -->
@@ -857,14 +863,31 @@ body:not(.loading) .music{opacity:1;transform:none}
 <button class="music" id="music" type="button" aria-label="Play music" aria-pressed="false"><span class="pp"><svg class="i-play" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9.5-5.5z"/></svg><svg class="i-pause" viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 1.5h3.2v11H2.5zM8.3 1.5h3.2v11H8.3z"/></svg></span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="ml" aria-hidden="true">Play</span></button>
 
 <script>
-/* ===== Loader: stays until the page (fonts, hero photo, scripts) has fully loaded ===== */
+/* ===== Loader: stays until the page has fully loaded, then starts the music from 0:00.
+   If the browser blocks sound until a tap (iPhone Safari, most first visits on Chrome),
+   the loader shows an "Open Invitation" button; that tap starts the music and opens the site. ===== */
 (function(){
-  const L = document.getElementById('loader'), t0 = Date.now();
-  let done = false;
-  const hide = () => { if (done) return; done = true;
-    setTimeout(() => { L.classList.add('gone'); document.body.classList.remove('loading'); window.__djLoaded = true; window.dispatchEvent(new Event('dj:loaded')); setTimeout(() => L.remove(), 900); }, Math.max(0, 900 - (Date.now() - t0))); };
-  if (document.readyState === 'complete') hide(); else addEventListener('load', hide);
-  setTimeout(hide, 15000);
+  const L = document.getElementById('loader'), A = document.getElementById('bgm'), B = document.getElementById('enter'), t0 = Date.now();
+  let started = false, opened = false;
+  function open(){
+    if (opened) return; opened = true;
+    L.classList.add('gone'); document.body.classList.remove('loading');
+    window.__djLoaded = true; window.dispatchEvent(new Event('dj:loaded'));
+    setTimeout(() => L.remove(), 900);
+  }
+  function fromStart(){ try { A.currentTime = 0; } catch (_) {} return A.play(); }
+  function ready(){
+    if (started) return; started = true;
+    setTimeout(() => {
+      if (!A) return open();
+      const p = fromStart();
+      if (p && p.then) p.then(open).catch(() => { L.classList.add('ask'); B.focus({ preventScroll: true }); });
+      else open();
+    }, Math.max(0, 900 - (Date.now() - t0)));
+  }
+  B.addEventListener('click', () => { if (A) fromStart().catch(() => {}); open(); });
+  if (document.readyState === 'complete') ready(); else addEventListener('load', ready);
+  setTimeout(ready, 15000);
 })();
 
 /* ===== Photos: drop files into the images/ folder with these names (jpg). ===== */
@@ -1172,7 +1195,6 @@ function djConfetti(){
   let userPaused = false;   // visitor switched music off with the button (this visit only)
   let resumeOnReturn = false, gestureArmed = false;
   A.volume = 0.6;
-  try { A.currentTime = 0; } catch (_) {}   // every visit starts the song from the beginning
   const save = () => {};
   const ui = () => { btn.classList.toggle('on', !A.paused); btn.querySelector('.ml').textContent = A.paused ? 'Play' : 'Pause'; btn.setAttribute('aria-pressed', String(!A.paused)); btn.setAttribute('aria-label', A.paused ? 'Play music' : 'Pause music'); };
   A.addEventListener('play', ui); A.addEventListener('pause', ui); ui();
